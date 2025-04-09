@@ -1,0 +1,189 @@
+* {
+    font-family: broadsheet, serif;
+}
+
+body {
+    padding: 50px;
+    margin: 0px;
+    background-color: black;
+}
+
+/*ScrollBar*/
+::-webkit-scrollbar {
+    width: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #838383; 
+}
+
+/*Text*/
+h1 {
+    font-family: antiquarian-scribe, sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    font-family: broadsheet, serif;
+    font-style: italic;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    font-family: broadsheet, serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*Sections*/
+#nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#work-prev {
+    margin-left: 15%;
+}
+
+#project {
+    margin-left: 15%
+}
+
+h1 span {
+    font-family: antiquarian-scribe, sans-serif;
+    color: white;
+    font-size: 2.5rem;
+}
+
+#nav h1 {
+    padding-bottom: 15px;
+}
+
+.move {
+    position: relative;
+    top: -6px;
+    left: 5px;
+}
+
+.work {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 15px;
+}
+
+.project {
+    display: flex;
+    margin: auto;
+    width: 50%;
+}
+
+.item {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.item .label {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.item:hover .label {
+    opacity: 1;
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background 0.2s ease;
+}
+
+.item:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#project-details h1 {
+    text-align: center;
+}
+
+#project-details p {
+    padding-top: 25px;
+}
+
+#project-details img {
+    width: 50%;
+}
+
+#project-details small {
+    color: white;
+}
+
+.project-name {
+    font-weight: 400;
+}
+
+iframe {
+    width: 100% !important;
+}
+
+.programs {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 5px;
+}
+
+.programs svg {
+    height: 100%
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+}
+
+.description-columns {
+    display: flex;
+    flex-flow: row-reverse;
+    padding: 25px 0;
+    gap: 15px;
+}
+
+#project-details .description-columns p {
+    padding: 0;
+}
