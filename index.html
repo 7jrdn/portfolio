@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,74 +8,92 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/bfn7iyg.css">
 </head>
+
 <body>
 
-    <section id="nav">
-        <a href="index.html"><h1><span class="move">7</span>Jrdn</h1></a>
-        <div class="nav-items">
-            <a href="about.html"><h2>About</h2></a>
-            <a href="contact.html"><h2>Contact</h2></a>
-        </div>
-    </section>
+    <div id="grain">
+        <section id="nav">
+            <a href="index.html">
+                <h1><span class="move">7</span>Jrdn</h1>
+            </a>
+            <div class="nav-items">
+                <a href="about.html">
+                    <h2>About</h2>
+                </a>
+                <a href="contact.html">
+                    <h2>Contact</h2>
+                </a>
+            </div>
+        </section>
 
-    <section id="work-prev">
-        <div class="work">
-            <div class="column">
-                <a href="work.html?project=aninvitationtodearmother">
-                    <div class="item">
+        <section id="work-prev">
+            <div class="work">
+                <div class="column">
+                    <a class="item" href="work.html?project=aninvitationtodearmother">
                         <p class="label">an invitation to dear möther</p>
                         <img src="work-prev/an-invitation-to-dear-mother.gif">
-                    </div>
-                </a>
-                <a href="work.html?project=deersect">
-                    <div class="item">
+                        <div class="overlay"></div>
+                    </a>
+                    <a class="item" href="work.html?project=deersect">
                         <p class="label">DEER SECT</p>
                         <img src="work-prev/deer-sect.gif">
-                    </div>
-                </a>
-                <a href="work.html?project=configuredbackground">
-                    <div class="item">
+                        <div class="overlay"></div>
+                    </a>
+                    <a class="item" href="work.html?project=configuredbackground">
                         <p class="label">Configured™ Website Background</p>
                         <img src="work-prev/configured-background.gif">
-                    </div>
-                </a>
-                <a href="work.html?project=configuredlogo">
-                    <div class="item">
+                        <div class="overlay"></div>
+                    </a>
+                    <a class="item" href="work.html?project=configuredlogo">
                         <p class="label">Configured™ Animated Logo</p>
                         <img src="work-prev/configured-logo.gif">
-                    </div>
-                </a>
-            </div>
-            <div class="column">
-                <a href="work.html?project=olsen">
-                    <div class="item">
+                        <div class="overlay"></div>
+                    </a>
+                </div>
+                <div class="column">
+                    <a class="item" href="work.html?project=olsen">
                         <p class="label">OLSEN</p>
                         <img src="work-prev/OLSEN.gif">
-                    </div>
-                </a>
-                <a href="work.html?project=sunsetDigital">
-                    <div class="item">
+                        <div class="overlay"></div>
+                    </a>
+                    <a class="item" href="work.html?project=sunsetDigital">
                         <p class="label">22-10-10_20-47.00 (Digital Camera Work)</p>
                         <img src="work-prev/22-10-10_20-47.00.gif">
-                    </div>
-                </a>
-                <a href="work.html?project=fjc">
-                    <div class="item">
+                        <div class="overlay"></div>
+                    </a>
+                    <a class="item" href="work.html?project=fjc">
                         <p class="label">fj/c 02 side b</p>
                         <img src="work-prev/fjc-02-side-b.gif">
-                    </div>
-                </a>
-                <a href="work.html?project=idontwannabealoser">
-                    <div class="item">
+                        <div class="overlay"></div>
+                    </a>
+                    <a class="item" href="work.html?project=idontwannabealoser">
                         <p class="label">idontwannabealoser</p>
                         <img src="work-prev/idontwannabealoser.gif">
-                    </div>
-                </a>
+                        <div class="overlay"></div>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
 
     <script src="script.js"></script>
     <script src="scrollPos.js"></script>
+    <script src="grained.js"></script>
+    <script>
+        var options = {
+            animate: true,
+            patternWidth: 500,
+            patternHeight: 500,
+            grainOpacity: 0.03,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        };
+
+        grained("#grain", options);
+    </script>
+
 </body>
+
 </html>

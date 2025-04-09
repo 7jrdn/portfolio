@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,50 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/bfn7iyg.css">
 </head>
+
 <body>
 
-    <section id="nav">
-        <a href="index.html"><h1><span class="move">7</span>Jrdn</h1></a>
-        <div class="nav-items">
-            <a href="about.html"><h2>About</h2></a>
-            <a href="contact.html"><h2>Contact</h2></a>
-        </div>
-    </section>
+    <div id="grain">
+        <section id="nav">
+            <a href="index.html">
+                <h1><span class="move">7</span>Jrdn</h1>
+            </a>
+            <div class="nav-items">
+                <a href="about.html">
+                    <h2>About</h2>
+                </a>
+                <a href="contact.html">
+                    <h2>Contact</h2>
+                </a>
+            </div>
+        </section>
 
-    <section id="about-me">
-        <div class="column">
-            <h1>Hey im Jordan</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </section>
+        <section id="about-me">
+            <div class="column">
+                <h1>Hey im Jordan</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+    </div>
 
+    <script src="grained.js"></script>
+    <script>
+        var options = {
+            animate: true,
+            patternWidth: 500,
+            patternHeight: 500,
+            grainOpacity: 0.03,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        };
+
+        grained("#grain", options);
+    </script>
 </body>
+
 </html>

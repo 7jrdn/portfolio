@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,48 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/bfn7iyg.css">
 </head>
+
 <body>
-
-    <section id="nav">
-        <a href="index.html"><h1><span class="move">7</span>Jrdn</h1></a>
-        <div class="nav-items">
-            <a href="about.html"><h2>About</h2></a>
-            <a href="contact.html"><h2>Contact</h2></a>
-        </div>
-    </section>
-
-    <section id="project">
-        <div class="work">
-            <div class="project">
-                <div id="project-details"></div>
+    <div id="grain">
+        <section id="nav">
+            <a href="index.html">
+                <h1><span class="move">7</span>Jrdn</h1>
+            </a>
+            <div class="nav-items">
+                <a href="about.html">
+                    <h2>About</h2>
+                </a>
+                <a href="contact.html">
+                    <h2>Contact</h2>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-<script src="script.js"></script>
+        <section id="project">
+            <div class="work">
+                <div class="project">
+                    <div id="project-details"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+
+    <script src="grained.js"></script>
+    <script>
+        var options = {
+            animate: true,
+            patternWidth: 500,
+            patternHeight: 500,
+            grainOpacity: 0.03,
+            grainDensity: 1,
+            grainWidth: 1,
+            grainHeight: 1
+        };
+
+        grained("#grain", options);
+    </script>
+
 </body>
+
 </html>
