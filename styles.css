@@ -10,7 +10,7 @@ body {
 
 /*ScrollBar*/
 ::-webkit-scrollbar {
-    width: 25px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -190,4 +190,82 @@ iframe {
 
 #project-details .description-columns p {
     padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    #work-prev {
+        margin-left: 15%;
+    }
+
+    .column {
+        width: 48%; /* Adjust column width on medium screens (tablets) */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 0;
+    }
+
+    #nav {
+        position: sticky;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 5px 0;
+    }
+
+    #work-prev {
+        margin-left: 0;
+    }
+
+    .work {
+        gap: 15px;
+    }
+
+    .column {
+        width: 100%; /* Stack columns on small screens */
+        padding: 0;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    #nav h1 {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
 }
