@@ -1,3 +1,7 @@
+:root {
+    --accent: #421b1b;
+  }
+
 * {
     font-family: broadsheet, serif;
 }
@@ -22,7 +26,7 @@ body {
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #838383; 
+    background: var(--accent)
 }
 
 /*Text*/
@@ -34,11 +38,11 @@ h1 {
 }
 
 #nav h1:hover {
-    color: #89624A
+    color: var(--accent)
 }
 
 #nav h1:hover span {
-    color: #89624A
+    color: var(--accent)
 }
 
 h2 {
@@ -51,7 +55,7 @@ h2 {
 }
 
 #nav h2:hover {
-    color: #89624A
+    color: var(--accent)
 }
 
 p {
@@ -78,18 +82,16 @@ img {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    z-index: 999;
 }
 
 #work-prev {
     margin-left: 15%;
 }
 
-#project {
-    margin-left: 15%;
-}
-
 #about-me {
-    margin-left: 15%;
+    margin: auto;
+    width: 50%;
 }
 
 #about-me .column {
@@ -155,18 +157,18 @@ a .item {
     height: 100%;
     width: 100%;
     opacity: 0;
-    transition: 0.2s ease;
+    transition: 0.3s ease;
     background-color: black;
 }
 
 .item:hover .overlay {
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .item .label {
     position: absolute;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
     z-index: 1;
     padding-left: 15px;
     padding-top: 10px;
@@ -211,10 +213,10 @@ iframe {
     height: 100%
 }
 
-.description {
+.description-info {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    justify-content: space-between;
     width: 100%;
 }
 
@@ -223,6 +225,12 @@ iframe {
     flex-flow: row-reverse;
     padding: 25px 0;
     gap: 15px;
+}
+
+.descriptions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 #project-details .description-columns p {
