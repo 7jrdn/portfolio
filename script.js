@@ -115,6 +115,11 @@ function loadProject(projectId) {
             }
         });
 
+        let imageHtml = '';
+        if (details.image1) {
+            imageHtml = `<img src="${details.image1}" alt="${details.title}">`;
+        }
+
         document.getElementById('project-details').innerHTML = `
             <div class="project-video">
                 <h1 class="project-name">${details.title}</h1>
@@ -123,7 +128,7 @@ function loadProject(projectId) {
             </div>
             <div class="description-wrapper">
                 <div class="description-columns">
-                    <img src="${details.image1}">
+                     ${imageHtml}
                     <div class="description-info">
                         <div class="descriptions">
                             <p>${details.description1}</p>
