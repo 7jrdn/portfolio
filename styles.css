@@ -76,6 +76,10 @@ img {
     margin-left: 15%;
 }
 
+#about-me .column {
+    width: 100%;
+}
+
 h1 span {
     font-family: antiquarian-scribe, sans-serif;
     color: white;
@@ -201,6 +205,10 @@ iframe {
         width: 48%; /* Adjust column width on medium screens (tablets) */
     }
 
+    .project {
+        width: 100%;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -212,7 +220,7 @@ iframe {
 
 @media screen and (max-width: 768px) {
     body {
-        padding-top: 0;
+        padding: 0 35px;
     }
 
     #nav {
@@ -226,19 +234,36 @@ iframe {
         width: 100%;
         z-index: 1;
         padding: 5px 0;
+        border-bottom: 1px solid white ;
     }
 
     #work-prev {
         margin-left: 0;
     }
 
+    #about-me {
+        margin: 0;
+        padding-top: 15px;
+    }
+
     .work {
+        padding-top: 15px;
         gap: 15px;
     }
 
     .column {
         width: 100%; /* Stack columns on small screens */
         padding: 0;
+    }
+
+    #project {
+        margin: 0;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
     }
 
     .nav-items {

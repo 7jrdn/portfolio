@@ -116,17 +116,21 @@ function loadProject(projectId) {
         });
 
         document.getElementById('project-details').innerHTML = `
-            <h1 class="project-name">${details.title}</h1>
-            <small>${details.music}</small>
-            <iframe src="${details.videoUrl};controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="aspect-ratio:${details.aspectRatio}"></iframe>
-            <p>${details.description1}</p>
-            <div class="description-columns">
-                <img src="${details.image1}">
-                <div class="description">
-                    <p>${details.description2}</p>
-                    <div class="programs">
-                        <small>Used Programs:</small>
-                        <div>${iconHtml}</div>
+            <div class="project-video">
+                <h1 class="project-name">${details.title}</h1>
+                <small>${details.music}</small>
+                <iframe src="${details.videoUrl};controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="aspect-ratio:${details.aspectRatio}"></iframe>
+            </div>
+            <div class="description-wrapper">
+                <p>${details.description1}</p>
+                <div class="description-columns">
+                    <img src="${details.image1}">
+                    <div class="description">
+                        <p>${details.description2}</p>
+                        <div class="programs">
+                            <small>Used Programs:</small>
+                            <div>${iconHtml}</div>
+                        </div>
                     </div>
                 </div>
             </div>
