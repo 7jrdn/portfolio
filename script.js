@@ -93,6 +93,17 @@ function loadProject(projectId) {
             icons: ["iw3xo", "aftereffects"],
         },
 
+        xxclusivetapes: {
+            title: "XXCLUSIVE tapes001 (Teaser Video)",
+            music: "Music Creds: sagesarpa",
+            description1: "Teaser video for the XXclusive art collective, promoting a mix featuring edits and music from various members. I illustrated the logo in Procreate and afterwards animated as well as added elements in After Effects.",
+            image1: "wip/xxclusive-teaser.gif",
+            description2: "",
+            videoUrl: "https://www.youtube.com/embed/V-rTlsoriOY?autoplay=1&loop=1&playlist=V-rTlsoriOY",
+            aspectRatio: "16 / 9",
+            icons: ["procreate", "aftereffects"],
+        },
+
     };
 
     const iconMapping = {

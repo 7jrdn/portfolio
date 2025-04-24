@@ -1,9 +1,9 @@
 :root {
-    --accent: #421b1b;
+    --accent: #bebebe;
   }
 
 * {
-    font-family: broadsheet, serif;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     background-color: black;
 }
 
-#grain > * { 
+#grain > *{ 
     position: relative; 
     padding: 50px;
 }
@@ -37,33 +37,50 @@ h1 {
     margin: 0;
 }
 
-#nav h1:hover {
-    color: var(--accent)
+.logo:active {
+    color: var(--accent);
 }
 
-#nav h1:hover span {
-    color: var(--accent)
+a:active .logo,
+a:active span {
+  color: var(--accent)
+}
+
+.nav-items h2:active {
+    color: var(--accent);
+}
+
+.social-icons {
+    display: flex;
+    gap: 5px;
+    padding-top: 15px;
+}
+
+i {
+    color: white;
+}
+
+a i:active {
+    color: var(--accent);
 }
 
 h2 {
-    font-family: broadsheet, serif;
-    font-style: italic;
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 400;
     margin: 0;
-}
-
-#nav h2:hover {
-    color: var(--accent)
+    line-height: 1.2rem;
 }
 
 p {
-    font-family: broadsheet, serif;
     color: white;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
     margin: 0;
+}
+
+small {
+    padding-bottom: 5px;
 }
 
 a {
@@ -89,13 +106,30 @@ img {
     margin-left: 15%;
 }
 
+#project {
+    min-height: 100vh;
+}
+
 #about-me {
     margin: auto;
     width: 50%;
+    height: 100vh;
+}
+
+#contact {
+    margin: auto;
+    width: 35%;
+    height: 100vh;
+}
+
+#contact .column {
+    width: 100%;
+    padding: 0;
 }
 
 #about-me .column {
     width: 100%;
+    padding: 0;
 }
 
 h1 span {
@@ -106,6 +140,23 @@ h1 span {
 
 #nav h1 {
     padding-bottom: 15px;
+}
+
+button {
+    font-family: broadsheet, serif;
+    font-size: 1.1rem;
+    width: 100px;
+    padding: 5px 5px 7px 5px;
+    border-radius: 0;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--accent);
 }
 
 .move {
@@ -188,14 +239,11 @@ a .item {
 
 #project-details img {
     width: 50%;
+    height: auto;
 }
 
 #project-details small {
     color: white;
-}
-
-.project-name {
-    font-weight: 400;
 }
 
 iframe {
@@ -206,7 +254,6 @@ iframe {
     display: flex;
     flex-direction: column;
     color: white;
-    gap: 5px;
 }
 
 .programs svg {
@@ -218,6 +265,7 @@ iframe {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    gap: 25px;
 }
 
 .description-columns {
@@ -237,35 +285,67 @@ iframe {
     padding: 0;
 }
 
-@media screen and (max-width: 1024px) {
-    #work-prev {
-        margin-left: 15%;
-    }
-
-    .column {
-        width: 48%; /* Adjust column width on medium screens (tablets) */
-    }
-
-    .project {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h1 span {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
+#contact h1 {
+    text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    height: 25px;
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid white;
+}
+
+textarea {
+    min-height: 100px;
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid white;
+    resize: none;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    align-self: center;
+}
+
+input[type=text], [type=email], textarea  {
+    color: white;
+}
+
+input[type=text], [type=email], textarea:focus {
+    outline: none;
+}
+
+.form-message {
+    display: none;
+    text-align: center;
+}
+
+.form-message.show {
+    display: block;
+}
+
+.success-msg {
+    color: white;
+}
+
+@media screen and (max-width: 992px) {
     #grain {
-        padding: 0 35px;
+        padding: 0 35px 35px 35px;
     }
 
     #nav {
@@ -282,8 +362,13 @@ iframe {
         border-bottom: 1px solid white ;
     }
 
+    #nav .logo {
+        padding: 0;
+    }
+
     #work-prev {
         margin-left: 0;
+        padding: 0;
     }
 
     #about-me {
@@ -297,12 +382,16 @@ iframe {
     }
 
     .column {
-        width: 100%; /* Stack columns on small screens */
+        width: 100%;
         padding: 0;
     }
 
     #project {
         margin: 0;
+    }
+
+    #contact {
+        width: 75%;
     }
 
     .project {
@@ -311,39 +400,34 @@ iframe {
         width: 100%;
     }
 
+    .description-columns {
+        flex-flow: column-reverse;
+    }
+
+    #project-details img {
+        width: 100%;
+    }
+
     .nav-items {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 15px;
     }
 
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h1 span {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1rem;
-    }
-
-    #nav h1 {
+    .social-icons {
         padding: 0;
+    }
+
+    .project-name {
+        font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.6rem;
+
+    #work-prev {
+        height: 100vh;
     }
 
-    h1 span {
-        font-size: 1.6rem;
-    }
-
-    h2 {
-        font-size: 0.9rem;
-    }
 }
