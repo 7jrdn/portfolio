@@ -449,4 +449,8 @@ input[type=text], [type=email], textarea:focus {
         height: 100vh;
     }
 
+    #about-me h1{
+        padding-left: 10px;
+    }
+
 }
