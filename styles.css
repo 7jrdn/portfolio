@@ -152,6 +152,7 @@ button {
     text-align: center;
     text-decoration: none;
     background-color: white;
+    color: black;
     cursor: pointer;
 }
 
