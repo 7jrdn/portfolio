@@ -374,7 +374,9 @@ input[type=text], [type=email], textarea:focus {
 
     #about-me {
         margin: 0;
+        padding: 0;
         padding-top: 15px;
+        width: 100%;
     }
 
     .work {
@@ -424,6 +426,10 @@ input[type=text], [type=email], textarea:focus {
 
     .social-icons {
         padding: 0;
+    }
+
+    h1 {
+        font-size: 1.8rem;
     }
 
     .project-name {
